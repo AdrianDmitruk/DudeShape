@@ -1,0 +1,700 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  padding: 44px 0 27px 0;
+  flex: 0 0 auto;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    margin-right: 215px;
+  }
+
+  &__nav-ul {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__nav-link {
+    @include nav;
+    color: $base-color-nav;
+
+    &:hover {
+      color: $base-color-orange;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.banner {
+  display: flex;
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $base-color-green;
+    padding: 101px 18px 137px 100px;
+  }
+
+  &__right-title {
+    @include h1;
+    color: $base-color-white;
+  }
+
+  &__right-subtitle {
+    @include subtitle;
+    color: $base-color-white;
+    max-width: 488px;
+  }
+
+  &__right-btn {
+    max-width: max-content;
+    display: flex;
+    padding: 16px 26px;
+    background: $base-color-white;
+    color: $base-color-green;
+
+    &:hover {
+      color: $base-color-white;
+      background: $base-color-text;
+    }
+  }
+}
+
+.partner {
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  &__title {
+    @include h2;
+    color: $base-color-green-dark;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  &__left {
+    max-width: 631px;
+    width: 100%;
+    height: 612px;
+    display: flex;
+    position: relative;
+  }
+
+  &__left-img {
+    max-width: 596px;
+    height: 577px;
+    display: flex;
+    z-index: 4;
+  }
+
+  &__left-bg {
+    background: $base-color-gray;
+    width: 631px;
+    height: 586px;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+  }
+
+  &__right-title {
+    @include h3;
+    color: $base-color-green-dark;
+  }
+
+  &__right-subtitle {
+    @include subtitle;
+    color: $base-color-dark;
+    margin: 20px 0 40px 0;
+  }
+
+  &__right-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__right-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__box-title {
+    @include h4;
+    color: $base-color-green-dark;
+  }
+
+  &__box-subtitle {
+    @include subtitleSmall;
+    color: $base-color-dark-subtitle;
+    max-width: 300px;
+  }
+}
+
+.product {
+  padding: 140px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__left-title {
+    @include h3;
+    color: $base-color-black;
+  }
+
+  &__left-subtitle {
+    @include subtitle;
+    color: $base-color-dark-subtitle;
+    max-width: 819px;
+  }
+
+  &__header-right {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__right-btn {
+    background: $base-color-spacy-gray;
+    border-radius: 50%;
+    padding: 12px;
+  }
+
+  &__btn-left {
+    transform: rotate(180deg);
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background: $base-color-white;
+    box-shadow: 0px 13px 26px 0px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+  }
+
+  &__card-img-wrap {
+    overflow: hidden;
+  }
+
+  &__card-img {
+    transition: transform 0.3s;
+  }
+
+  &__card-wrap {
+    padding: 30px 24px 27px 24px;
+  }
+
+  &__wrap-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__first-title {
+    @include h6;
+    color: $base-color-black;
+  }
+
+  &__first-btn {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__btn-wrap {
+    padding: 8px;
+    background: $base-color-gray-social;
+    display: flex;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: $base-color-red;
+    }
+  }
+
+  &__btn-icon {
+    transition: filter 0.3s;
+  }
+
+  &__wrap-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__second-price {
+    @include price;
+    color: $base-color-green;
+  }
+
+  &__second-btn {
+    @include priceBtn;
+    padding: 5px 14px;
+    background: $base-color-green-dark;
+    color: $base-color-white;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: $base-color-green-border;
+    }
+  }
+}
+
+.product__card:hover .product__card-img {
+  transform: scale(1.1);
+}
+
+.product__btn-wrap:hover .product__btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.furniture {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__header-title {
+    @include h3;
+    color: $base-color-black;
+  }
+
+  &__header-wrap {
+    display: flex;
+    gap: 100px;
+  }
+
+  &__wrap-tab {
+    @include price;
+    color: $base-color-dark-tab;
+    cursor: pointer;
+  }
+
+  &__tab-active {
+    color: $base-color-green;
+    position: relative;
+  }
+
+  &__tab-active::after {
+    content: "";
+    position: absolute;
+    right: 58px;
+    bottom: -6px;
+    width: 57px;
+    height: 2px;
+    background: $base-color-green;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__main-left {
+    width: 577px;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__left-img {
+    width: 552px;
+    height: 389px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__main-left::after {
+    content: "";
+    width: 190px;
+    height: 85px;
+    position: absolute;
+    background: $base-color-green;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &__main-left::before {
+    content: "";
+    width: 190px;
+    height: 85px;
+    position: absolute;
+    background: $base-color-green;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__main-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 33px;
+    max-width: 477px;
+  }
+  &__right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    gap: 14px;
+    width: 222px;
+    border: 1px solid $base-color-border;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: $base-color-green;
+    }
+  }
+
+  &__box-text {
+    color: $base-color-text;
+    @include text;
+  }
+
+  &__box-active {
+    background: $base-color-green;
+  }
+
+  &__text-active {
+    color: $base-color-white;
+  }
+}
+
+.furniture__right-box:hover .furniture__box-img {
+  filter: brightness(0) invert(1);
+}
+
+.furniture__right-box:hover .furniture__box-text {
+  color: $base-color-white;
+}
+
+.reviews {
+  padding: 140px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left {
+    display: flex;
+    position: relative;
+    width: 564px;
+    height: 492px;
+    justify-content: flex-end;
+  }
+
+  &__left-img {
+    width: 459px;
+    height: 492px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__left::after {
+    content: "";
+    width: 492px;
+    height: 492px;
+    background: $base-color-green-dark;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 535px;
+  }
+
+  &__right-title {
+    @include h3;
+    color: $base-color-black;
+  }
+
+  &__right-subtitle {
+    @include subtitle;
+    color: $base-color-dark-subtitle;
+    margin: 20px 0 45px 0;
+  }
+
+  &__right-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__user-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__user-name {
+    @include text;
+  }
+
+  &__name-number {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__number {
+    @include number;
+  }
+}
+
+.news {
+  margin-bottom: 140px;
+  padding: 68px 0 55px 0;
+  background: $base-color-spacy-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include h3;
+    color: $base-color-black-title;
+    max-width: 605px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include nav;
+    color: $base-color-black-title;
+    max-width: 493px;
+    text-align: center;
+    margin: 20px 0 40px 0;
+  }
+
+  &__form {
+    max-width: 472px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__form-input {
+    padding: 22px 145px 22px 45px;
+    width: 100%;
+    background: $base-color-white;
+    color: $base-color-gray-input;
+    @include nav;
+
+    &:focus {
+      background: $base-color-green-border;
+    }
+  }
+
+  &__form-input::placeholder {
+    color: $base-color-gray-input;
+    @include nav;
+  }
+
+  &__form-img {
+    position: absolute;
+    top: 25px;
+    left: 17px;
+  }
+
+  &__form-btn {
+    position: absolute;
+    @include text;
+    padding: 15px 31px;
+    background: $base-color-green-btn-form;
+    color: $base-color-white;
+    top: 7px;
+    right: 20px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background: $base-color-footer-form;
+    }
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+  background: $base-color-green-btn-form;
+
+  &__wrap {
+    padding: 100px 0 40px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 308px;
+  }
+
+  &__info-title {
+    @include footerTitle;
+    color: $base-color-white;
+  }
+
+  &__info-subtitle {
+    @include subtitleSmall;
+    color: $base-color-white;
+    margin: 24px 0 40px 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav-title {
+    @include h4;
+    color: $base-color-white;
+    margin-bottom: 24px;
+  }
+
+  &__nav-link {
+    @include subtitleSmall;
+    color: $base-color-white;
+    margin-bottom: 16px;
+    &:hover {
+      color: $base-color-footer-form;
+    }
+  }
+
+  &__subs {
+    display: flex;
+    flex-direction: column;
+    max-width: 253px;
+  }
+
+  &__subs-title {
+    @include h4;
+    color: $base-color-white;
+  }
+
+  &__subs-subtitle {
+    @include subtitleSmall;
+    color: $base-color-white;
+    margin: 23px 0 40px 0;
+  }
+
+  &__subs-form {
+    max-width: 100%;
+    position: relative;
+  }
+
+  &__form-input {
+    background: $base-color-white;
+    width: 100%;
+    padding: 14px 45px 14px 22px;
+    @include nav;
+    color: $base-color-footer-form;
+  }
+
+  &__form-input::placeholder {
+    @include nav;
+    color: $base-color-footer-form;
+  }
+
+  &__form-btn {
+    position: absolute;
+    display: flex;
+    background: $base-color-orange;
+    top: 10px;
+    right: 12px;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  &__info-follow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__follow-title {
+    @include h4;
+    color: $base-color-white;
+  }
+
+  &__follow-icon {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__copy {
+    text-align: center;
+    padding: 20px 0 20px 0;
+    @include subtitleSmall;
+    color: $base-color-white;
+    border-top: 1px solid $base-color-green-border;
+  }
+}
